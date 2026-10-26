@@ -12,7 +12,8 @@ st.write("These are REAL power plants from around the world. Let the computer so
 
 # Step 1: load the real power plant data (34,936 plants, World Resources Institute)
 csv_path = Path(__file__).resolve().parent / "power_plants.csv"
-plants = pd.read_csv(csv_path)counts = plants.groupby(["country_long", "primary_fuel"]).size().reset_index(name="n")
+plants = pd.read_csv(csv_path)
+counts = plants.groupby(["country_long", "primary_fuel"]).size().reset_index(name="n")
 counts = counts[counts["n"] >= 8]                    # we need enough plants to make groups
 
 # Step 2: the student chooses a country, an energy type and how many regions
