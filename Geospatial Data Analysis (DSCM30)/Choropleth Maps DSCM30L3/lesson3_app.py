@@ -1,13 +1,16 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
+
 
 st.title("World Time Machine: Two Countries, One Story")
 st.write("A **choropleth map** colours whole countries by a number. Pick your country and a friend's country, "
          "travel from 1952 to 2022, and see how each one changed compared with the rest of the world. Grey countries have no data.")
 
 # Step 1: load real country data (a file that comes with this app)
-world_data = pd.read_csv("world_data.csv")
+csv_path = Path(__file__).resolve().parent / "world_data.csv"
+world_data = pd.read_csv(csv_path)
 
 # What each number means, in plain words: (short phrase, label for the charts)
 meanings = {
