@@ -1,8 +1,0 @@
-streamlit==1.45.1
-streamlit-folium==0.25.0
-folium==0.19.7
-plotly==6.1.2
-geonamescache==2.0.0
-scikit-learn==1.6.1
-pandas==2.2.3
-numpy==1.26.4
